@@ -10,5 +10,23 @@ private:
 	int Denom;//Denominator for fraction
 	int Num; //Numerator for fraction
 public:
-//Prototypes for public member functions
+	//Prototypes for public member functions
+	Fraction();
+	void add(Fraction);
+	void subtract(Fraction);
+	void multiply(Fraction);
+	void divide(Fraction);
+	void setNumDenom(int, int);
+	void getNumDenom(int&, int&);
+	void print();
+	~Fraction();
 };
+
+//Default constructor
+Fraction::Fraction()
+{
+	
+}
+
+
+
