@@ -72,4 +72,29 @@ void Fraction::divide(Fraction F)
 	Denom = N * Denom;         //Determining the Denominator
 }
 
+//Setting valid values for Numerator and Denominator
+void Fraction::setNumDenom(int Numerator, int Denominator)
+{
+
+	if (Denominator != 0)//Validates denominator
+	{
+		Num = Numerator;
+		Denom = Denominator;
+	}
+	else
+	{
+		cout << "Cannot divide by Zero!!!!!!" << endl;
+		cout << "Re-enter 'THE ENTIRE' fraction: ";
+		cin >> Numerator >> Denominator;    //Re-entering values for fraction
+		cout << endl;
+	}
+}
+
+//Reading the numerator and numerator by passing them by reference
+void Fraction::getNumDenom(int &Numerator, int &Denominator)
+{
+	Numerator = Num;
+	Denominator = Denom;
+}
+
 
