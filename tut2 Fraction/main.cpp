@@ -40,7 +40,7 @@ void Fraction::add(Fraction F)
 }
 
 //subtracts 2 fractions 
-void Fraction::add(Fraction F)
+void Fraction::subtract(Fraction F)
 {
 	int D, N;
 	F.getNumDenom(N, D);//Extracts Numerator and Denominator of fraction 'F'
@@ -49,3 +49,27 @@ void Fraction::add(Fraction F)
 	Num = Num * D - N * Denom; //Determining the Numerator
 	Denom = D * Denom;         //Determining the Denominator
 }
+
+//multiplies 2 fractions 
+void Fraction::multiply(Fraction F)
+{
+	int D, N;
+	F.getNumDenom(N, D);//Extracts Numerator and Denominator of fraction 'F'
+
+	//instructions for performing the multiplication of 2 fractions
+	Num = Num *  N ;           //Determining the Numerator
+	Denom = D * Denom;         //Determining the Denominator
+}
+
+//divides 2 fractions 
+void Fraction::divide(Fraction F)
+{
+	int D, N;
+	F.getNumDenom(N, D);//Extracts Numerator and Denominator of fraction 'F'
+
+	//instructions for performing the division of 2 fractions
+	Num = Num *  D;            //Determining the Numerator
+	Denom = N * Denom;         //Determining the Denominator
+}
+
+
