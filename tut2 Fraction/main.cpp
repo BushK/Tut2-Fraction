@@ -97,4 +97,35 @@ void Fraction::getNumDenom(int &Numerator, int &Denominator)
 	Denominator = Denom;
 }
 
+//Printing the fraction
+void Fraction::print()
+{
+	int PNumerator, PDenominator, WholeN;//Declarations
 
+	WholeN = Num / Denom;    //Whole Number in mixed form
+	PNumerator = Num % Denom;//printed numerator
+	PDenominator = Denom;    //printed denominator
+
+	//printing the Fraction in mixed  form
+	if (WholeN != 0)
+		cout << WholeN ;
+	if (PNumerator != 0)
+		cout << "<" << PNumerator << "/" << PDenominator << ">";
+}
+
+Fraction::~Fraction()
+{
+
+}
+
+int main()
+{
+	Fraction Fraction1, Fraction2, Fraction3, Fraction4;
+
+	Fraction1.setNumDenom(3, 9);
+	Fraction2.setNumDenom(7, 12);
+	Fraction1.add(Fraction2);
+	Fraction1.print();
+	cout << endl;
+	return 0;
+}
