@@ -120,12 +120,33 @@ Fraction::~Fraction()
 
 int main()
 {
-	Fraction Fraction1, Fraction2, Fraction3, Fraction4;
+	Fraction Fraction1, Fraction2, Fraction3, Fraction4;// creating 4 fraction objects of type Fraction
 
 	Fraction1.setNumDenom(3, 9);
 	Fraction2.setNumDenom(7, 12);
+
 	Fraction1.add(Fraction2);
 	Fraction1.print();
+
 	cout << endl;
+	cout << endl;
+	
+	Fraction3.setNumDenom(5, 7);
+	Fraction2.divide(Fraction3);
+	Fraction2.print();
+
+	cout << endl;
+	cout << endl;
+
+	Fraction4.setNumDenom(9, 5);
+	Fraction4.subtract(Fraction3);
+	Fraction4.print();
+
+	cout << endl;
+	cout << endl;
+
+	return 0;
+
+
 	return 0;
 }
